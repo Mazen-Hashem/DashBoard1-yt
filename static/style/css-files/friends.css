@@ -1,0 +1,133 @@
+/* ==========================================container */
+.content main .friends-section .container {
+  margin-top: 55px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .content main .friends-section .container {
+    grid-template-columns: minmax(200px, 1fr);
+    gap: 10px;
+  }
+}
+
+/* boxs */
+.content main .friends-section .container .boxs {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.content main .friends-section .container .boxs .main .VIP {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 0.3;
+  color: var(--orange-clr);
+}
+
+
+.content main .friends-section .container .boxs .head {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.content main .friends-section .container .boxs .head .contacts {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.content main .friends-section .container .boxs .head .contacts i {
+  padding: 10px;
+  font-size: 13px;
+  color: #666;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--boxs-clr);
+  transition: var(--main-transition);
+}
+
+.content main .friends-section .container .boxs .head .contacts i:hover {
+  color: white;
+  background-color: var(--blue-clr);
+}
+
+.content main .friends-section .container .boxs .head img {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+
+.content main .friends-section .container .boxs .head h3 {
+  font-size: 18px;
+}
+
+.content main .friends-section .container .boxs .head p {
+  font-size: 14px;
+  color: var(--grey-clr);
+}
+
+
+.content main .friends-section .container .boxs .main {
+  position: relative;
+  padding: 15px 0;
+  margin: 15px 0;
+  border-top: 1px solid var(--boxs-clr);
+  border-bottom: 1px solid var(--boxs-clr);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content main .friends-section .container .boxs .main .info-row {
+  width: fit-content;
+  font-size: 14px;
+}
+
+.content main .friends-section .container .boxs .main .info-row i {
+  margin-right: 5px;
+}
+
+
+.content main .friends-section .container .boxs .foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.content main .friends-section .container .boxs .foot span {
+  font-size: 13px;
+  color: var(--grey-clr);
+}
+
+.content main .friends-section .container .boxs .foot .lnk-buts {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.content main .friends-section .container .boxs .foot .lnk-buts a {
+  padding: 3px 8px;
+  color: white;
+  font-size: 12px;
+  border-radius: 6px;
+  background-color: var(--ft-aclr);
+}
+
+/* end content */

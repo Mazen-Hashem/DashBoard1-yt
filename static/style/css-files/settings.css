@@ -1,0 +1,477 @@
+/* ==========================================container */
+.content main .settings-section .container {
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 20px;
+}
+.content main .settings-section .container .boxs {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.content main .settings-section .container :disabled {
+    color: #bbb;
+    background-color: #f0f4f8;
+    cursor: no-drop;
+}
+@media (max-width: 767px) {
+    .content main .settings-section .container {
+        grid-template-columns: minmax(200px, 1fr);
+        gap: 10px;
+    }
+}
+/* box1 */
+.content main .settings-section .container .box1 .head {
+    margin-bottom: 20px;
+}
+.content main .settings-section .container .box1 .head h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.content main .settings-section .container .box1 .head p {
+    font-size: 15px;
+    color: var(--grey-clr);
+}
+
+
+.content main .settings-section .container .box1 .main .control {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content main .settings-section .container .box1 .main .control .info h4 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.content main .settings-section .container .box1 .main .control .info p {
+    font-size: 13px;
+    color: var(--grey-clr);
+}
+.content main .settings-section .container .box1 .main .control .checkbox input {
+    appearance: none;
+    display: none;
+}
+.content main .settings-section .container .box1 .main .control .checkbox label {
+    position: relative;
+    width: 78px;
+    height: 32px;
+    display: block;
+    border-radius: 16px;
+    cursor: pointer;
+    background-color: var(--border-clr);
+    transition: var(--main-transition);
+}
+.content main .settings-section .container .box1 .main .control .checkbox label::before {
+    position: absolute;
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    content: "\f00d";
+    top: 4px;
+    left: 4px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: var(--border-clr);
+    transition: var(--main-transition);
+}
+.content main .settings-section .container .box1 .main .control .checkbox input:checked + label {
+    background-color: var(--blue-clr);
+}
+.content main .settings-section .container .box1 .main .control .checkbox input:checked + label::before {
+    content: "\f00c";
+    left: 50px;
+    color: var(--blue-clr);
+}
+
+.content main .settings-section .container .box1 .main textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-clr);
+}
+/* box2 */
+.content main .settings-section .container .box2 .head {
+    margin-bottom: 20px;
+}
+.content main .settings-section .container .box2 .head h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.content main .settings-section .container .box2 .head p {
+    font-size: 15px;
+    color: var(--grey-clr);
+}
+
+
+.content main .settings-section .container .box2 form .lab-in {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.content main .settings-section .container .box2 form .lab-in label {
+    width: fit-content;
+    font-size: 15px;
+    color: var(--grey-clr);
+}
+.content main .settings-section .container .box2 form .lab-in input {
+    padding: 13px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-clr);
+}
+
+.content main .settings-section .container .box2 form .lab-em-bu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.content main .settings-section .container .box2 form .lab-em-bu label {
+    width: fit-content;
+    font-size: 15px;
+    color: var(--grey-clr);
+}
+.content main .settings-section .container .box2 form .lab-em-bu .lab-em {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.content main .settings-section .container .box2 form .lab-em-bu .lab-em input {
+    padding: 13px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-clr);
+    flex: 1;
+}
+.content main .settings-section .container .box2 form .lab-em-bu .lab-em button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--blue-clr);
+}
+/* box3 */
+.content main .settings-section .container .box3 .head {
+    margin-bottom: 20px;
+}
+.content main .settings-section .container .box3 .head h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.content main .settings-section .container .box3 .head p {
+    font-size: 15px;
+    color: var(--grey-clr);
+}
+
+
+.content main .settings-section .container .box3 .main .infos-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content main .settings-section .container .box3 .main .infos-row:not(:last-child) {
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--boxs-clr);
+}
+.content main .settings-section .container .box3 .main .infos-row .info h4 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.content main .settings-section .container .box3 .main .infos-row .info p {
+    font-size: 13px;
+    color: var(--grey-clr);
+}
+
+.content main .settings-section .container .box3 .main .infos-row button {
+    padding: 6px 12px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--blue-clr);
+    transition: var(--main-transition);
+}
+.content main .settings-section .container .box3 .main .infos-row button:hover {
+    background-color: var(--blue-alt-clr);
+}
+
+.content main .settings-section .container .box3 .main .infos-row .checkbox input {
+    appearance: none;
+    display: none;
+}
+.content main .settings-section .container .box3 .main .infos-row .checkbox label {
+    position: relative;
+    width: 78px;
+    height: 32px;
+    display: block;
+    border-radius: 16px;
+    cursor: pointer;
+    background-color: var(--border-clr);
+    transition: var(--main-transition);
+}
+.content main .settings-section .container .box3 .main .infos-row .checkbox label::before {
+    position: absolute;
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    content: "\f00d";
+    top: 4px;
+    left: 4px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: var(--border-clr);
+    transition: var(--main-transition);
+}
+.content main .settings-section .container .box3 .main .infos-row .checkbox input:checked + label {
+    background-color: var(--blue-clr);
+}
+.content main .settings-section .container .box3 .main .infos-row .checkbox input:checked + label::before {
+    content: "\f00c";
+    left: 50px;
+    color: var(--blue-clr);
+}
+
+.content main .settings-section .container .box3 .main .infos-row a {
+    padding: 6px 12px;
+    color: black;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: var(--boxs-clr);
+}
+/* box4 */
+.content main .settings-section .container .box4 .head {
+    margin-bottom: 20px;
+}
+.content main .settings-section .container .box4 .head h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.content main .settings-section .container .box4 .head p {
+    font-size: 15px;
+    color: var(--grey-clr);
+}
+
+
+.content main .settings-section .container .box4 form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.content main .settings-section .container .box4 form .infos-row {
+    display: flex;
+    align-items: center;
+}
+.content main .settings-section .container .box4 form .infos-row i {
+    width: 40px;
+    height: 40px;
+    background-color: #f6f6f6;
+    border: 1px solid var(--border-clr);
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--grey-clr);
+    transition: var(--main-transition);
+}
+.content main .settings-section .container .box4 form .infos-row input {
+    height: 40px;
+    padding: 0 10px;
+    background-color: #f6f6f6;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border-clr) var(--border-clr) var(--border-clr) transparent;
+    border-radius: 0 5px 5px 0;
+    flex: 1;
+}
+.content main .settings-section .container .box4 form .infos-row:focus-within i {
+    color: var(--box4-iclr);
+}
+/* box5 */
+.content main .settings-section .container .box5 .head {
+    margin-bottom: 20px;
+}
+.content main .settings-section .container .box5 .head h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.content main .settings-section .container .box5 .head p {
+    font-size: 15px;
+    color: var(--grey-clr);
+}
+
+
+.content main .settings-section .container .box5 .main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.content main .settings-section .container .box5 .main .control-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.content main .settings-section .container .box5 .main .control-row input {
+    appearance: none;
+    cursor: pointer;
+}
+.content main .settings-section .container .box5 .main .control-row input:hover + label::before {
+    border-color: var(--blue-clr);
+}
+.content main .settings-section .container .box5 .main .control-row label {
+    position: relative;
+    padding-left: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.content main .settings-section .container .box5 .main .control-row label::before,
+.content main .settings-section .container .box5 .main .control-row label::after {
+    position: absolute;
+    top: 50%;
+    left: -9px;
+    margin-top: -9px;
+    border-radius: 4px;
+    transition: var(--main-transition);
+}
+.content main .settings-section .container .box5 .main .control-row label::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--grey-clr);
+}
+.content main .settings-section .container .box5 .main .control-row label::after {
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform:  scale(0)  rotate(360deg);
+    background-color: var(--blue-clr);
+}
+.content main .settings-section .container .box5 .main .control-row input:checked + label::after {
+    transform: scale(1);
+}
+/* box6 */
+.content main .settings-section .container .box6 .head {
+    margin-bottom: 20px;
+}
+.content main .settings-section .container .box6 .head h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.content main .settings-section .container .box6 .head p {
+    font-size: 15px;
+    color: var(--grey-clr);
+}
+
+
+.content main .settings-section .container .box6 .main1 {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--boxs-clr);
+}
+.content main .settings-section .container .box6 .main1 .time-row:not(:last-child) {
+    margin-bottom: 10px;
+}
+.content main .settings-section .container .box6 .main1 .time-row input {
+    appearance: none;
+}
+.content main .settings-section .container .box6 .main1 .time-row label {
+    position: relative;
+    padding-left: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.content main .settings-section .container .box6 .main1 .time-row label::before,
+.content main .settings-section .container .box6 .main1 .time-row label::after {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    transition: var(--main-transition);
+}
+.content main .settings-section .container .box6 .main1 .time-row label::before {
+    top: 50%;
+    margin-top: -11px;
+    left: -4px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--grey-clr);
+}
+.content main .settings-section .container .box6 .main1 .time-row label::after {
+    top: 6px;
+    left: 1px;
+    width: 12px;
+    height: 12px;
+    transform: scale(0);
+    background-color: var(--blue-clr);
+}
+.content main .settings-section .container .box6 .main1 .time-row input:checked + label::before {
+    border-color: var(--blue-clr);
+}
+.content main .settings-section .container .box6 .main1 .time-row input:checked + label::after {
+    transform: scale(1);
+}
+
+
+.content main .settings-section .container .box6 .main2 {
+    display: flex;
+    gap: 10px;
+}
+.content main .settings-section .container .box6 .main2 .loca-row {
+    width: 100%;
+}
+.content main .settings-section .container .box6 .main2 .loca-row input {
+    appearance: none;
+    display: none;
+}
+.content main .settings-section .container .box6 .main2 .loca-row label {
+    padding: 15px 0;
+    border: 2px solid var(--border-clr);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: var(--main-transition);
+}
+.content main .settings-section .container .box6 .main2 .loca-row label i {
+    font-size: 16px;
+    transition: var(--main-transition);
+}
+.content main .settings-section .container .box6 .main2 .loca-row label span {
+    font-size: 17px;
+    transition: var(--main-transition);
+}
+.content main .settings-section .container .box6 .main2 .loca-row input:checked + label{
+    border-color: var(--blue-clr);
+}
+.content main .settings-section .container .box6 .main2 .loca-row input:checked + label i,
+.content main .settings-section .container .box6 .main2 .loca-row input:checked + label span{
+    color: var(--blue-clr);
+}
+@media (max-width: 767px) {
+    .content main .settings-section .container .box6 .main2 {
+        flex-direction: column;
+    }
+}
+/* end content */

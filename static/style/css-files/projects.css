@@ -1,0 +1,133 @@
+/* ==========================================container */
+.content main .projects-section .container {
+  margin-top: 55px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .content main .projects-section .container {
+    grid-template-columns: minmax(200px, 1fr);
+    gap: 10px;
+  }
+}
+
+/* boxs */
+.content main .projects-section .container .boxs {
+  position: relative;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.content main .projects-section .container .boxs .time {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 13px;
+  color: var(--grey-clr);
+}
+
+
+.content main .projects-section .container .boxs .head {
+  margin-bottom: 20px;
+}
+
+.content main .projects-section .container .boxs .head h3 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.content main .projects-section .container .boxs .head p {
+  font-size: 13px;
+  color: var(--grey-clr);
+}
+
+
+.content main .projects-section .container .boxs .team {
+  margin-top: 50px;
+}
+
+.content main .projects-section .container .boxs .team a {
+  position: relative;
+  display: inline-block;
+}
+
+.content main .projects-section .container .boxs .team a:not(:first-child) {
+  margin-left: -20px;
+}
+
+.content main .projects-section .container .boxs .team a:hover {
+  z-index: 1000;
+}
+
+.content main .projects-section .container .boxs .team a img {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+
+.content main .projects-section .container .boxs .skills {
+  padding: 10px 0;
+  margin: 10px 0;
+  border-top: 1px solid var(--boxs-clr);
+  border-bottom: 1px solid var(--boxs-clr);
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.content main .projects-section .container .boxs .skills span {
+  width: fit-content;
+  padding: 3px 8px;
+  font-size: 15px;
+  border-radius: 6px;
+  background-color: var(--boxs-clr);
+}
+
+
+.content main .projects-section .container .boxs .foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content main .projects-section .container .boxs .foot .prog {
+  width: 250px;
+  height: 8px;
+  border-radius: 5px;
+  background-color: var(--boxs-clr);
+  overflow: hidden;
+}
+
+.content main .projects-section .container .boxs .foot .prog span {
+  display: block;
+  height: 100%;
+  background-color: var(--prog-clr);
+}
+
+.content main .projects-section .container .boxs .foot p {
+  font-size: 14px;
+  color: var(--grey-clr);
+}
+
+@media (max-width: 767px) {
+  .content main .projects-section .container .boxs .skills {
+    flex-direction: column;
+  }
+
+
+  .content main .projects-section .container .boxs .foot {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* end content */

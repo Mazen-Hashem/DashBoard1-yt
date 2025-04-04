@@ -1,0 +1,351 @@
+/* ==========================================container */
+.content main .profile-section .container {
+  margin-top: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.content main .profile-section .container .boxs {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* box1 */
+.content main .profile-section .container .box1 {
+  flex-basis: 100%;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .content main .profile-section .container {
+    gap: 10px;
+  }
+}
+
+
+.content main .profile-section .container .box1 .prof-side {
+  position: relative;
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.content main .profile-section .container .box1 .prof-side::before {
+  position: absolute;
+  content: " ";
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 70%;
+  background-color: var(--boxs-clr);
+}
+
+.content main .profile-section .container .box1 .prof-side img {
+  width: 120px;
+  height: 120px;
+}
+
+.content main .profile-section .container .box1 .prof-side h3 {
+  font-size: 20px;
+}
+
+.content main .profile-section .container .box1 .prof-side p {
+  color: var(--grey-clr);
+  font-size: 15px;
+}
+
+.content main .profile-section .container .box1 .prof-side .level {
+  width: 70%;
+  height: 6px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--boxs-clr);
+}
+
+.content main .profile-section .container .box1 .prof-side .level span {
+  height: 100%;
+  display: block;
+  background-color: var(--blue-clr);
+}
+
+.content main .profile-section .container .box1 .prof-side .stars i {
+  font-size: 13px;
+  color: var(--orange-clr);
+}
+
+.content main .profile-section .container .box1 .prof-side .rating {
+  font-size: 13px;
+  color: var(--grey-clr);
+}
+
+
+.content main .profile-section .container .box1 .info-rows {
+  width: 100%;
+}
+
+.content main .profile-section .container .box1 .info-rows .info-row {
+  padding: 20px;
+  transition: var(--main-transition);
+}
+
+.content main .profile-section .container .box1 .info-rows .info-row:not(:last-child) {
+  border-bottom: 1px solid var(--boxs-clr);
+}
+
+.content main .profile-section .container .box1 .info-rows .info-row:hover {
+  background-color: #f9f9f9;
+}
+
+.content main .profile-section .container .box1 .info-rows .info-row h3 {
+  font-size: 18px;
+}
+
+.content main .profile-section .container .box1 .info-rows .info-row .info {
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.content main .profile-section .container .box1 .info-rows .info-row .info span {
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+
+.content main .profile-section .container .box1 .info-rows .info-row .info span h4 {
+  font-size: 15px;
+  font-weight: normal;
+  text-wrap: nowrap;
+}
+
+.content main .profile-section .container .box1 .info-rows .info-row .info span p {
+  font-size: 13px;
+  text-wrap: nowrap;
+  color: var(--grey-clr);
+}
+
+.content main .profile-section .container .box1 .info-rows .info-row .checkbox input {
+  appearance: none;
+  display: none;
+}
+
+.content main .profile-section .container .box1 .info-rows .info-row .checkbox label {
+  position: relative;
+  width: 78px;
+  height: 20px;
+  display: block;
+  border-radius: 16px;
+  cursor: pointer;
+  background-color: var(--border-clr);
+  transition: var(--main-transition);
+}
+
+.content main .profile-section .container .box1 .info-rows .info-row .checkbox label::before {
+  position: absolute;
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  content: "\f00d";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  font-size: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: var(--border-clr);
+  transition: var(--main-transition);
+}
+
+.content main .profile-section .container .box1 .info-rows .info-row .checkbox input:checked+label {
+  background-color: var(--blue-clr);
+}
+
+.content main .profile-section .container .box1 .info-rows .info-row .checkbox input:checked+label::before {
+  content: "\f00c";
+  left: 62px;
+  color: var(--blue-clr);
+}
+
+@media (max-width: 991px) {
+  .content main .profile-section .container .box1 {
+    flex-direction: column;
+  }
+
+
+  .content main .profile-section .container .box1 .prof-side {
+    width: 100%;
+    border-bottom: 1px solid var(--boxs-clr);
+  }
+
+  .content main .profile-section .container .box1 .prof-side::before {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .content main .profile-section .container .box1 .info-rows .info-row {
+    text-align: center;
+  }
+
+  .content main .profile-section .container .box1 .info-rows .info-row .info span {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .content main .profile-section .container .box1 .info-rows .info-row .checkbox label {
+    margin: auto;
+  }
+}
+
+/* box2 */
+.content main .profile-section .container .box2 {
+  padding: 20px;
+  flex: 1;
+}
+
+
+.content main .profile-section .container .box2 .head {
+  margin-bottom: 20px;
+}
+
+.content main .profile-section .container .box2 .head h3 {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.content main .profile-section .container .box2 .head p {
+  font-size: 15px;
+  color: var(--grey-clr);
+}
+
+
+.content main .profile-section .container .box2 ul li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.content main .profile-section .container .box2 ul li:not(:last-child) {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--boxs-clr);
+}
+
+.content main .profile-section .container .box2 ul li span {
+  padding: 5px 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: var(--boxs-clr);
+}
+
+@media (max-width: 991px) {
+  .content main .profile-section .container .box2 {
+    width: 100%;
+    flex: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .content main .profile-section .container .box2 ul li {
+    justify-content: center;
+  }
+}
+
+/* box3 */
+.content main .profile-section .container .box3 {
+  padding: 20px;
+  flex: 2;
+}
+
+
+.content main .profile-section .container .box3 .head {
+  margin-bottom: 20px;
+}
+
+.content main .profile-section .container .box3 .head h3 {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.content main .profile-section .container .box3 .head p {
+  font-size: 15px;
+  color: var(--grey-clr);
+}
+
+
+.content main .profile-section .container .box3 .main .activities-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.content main .profile-section .container .box3 .main .activities-row:not(:last-child) {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--boxs-clr);
+}
+
+.content main .profile-section .container .box3 .main .activities-row .info-img {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.content main .profile-section .container .box3 .main .activities-row .info-img img {
+  width: 64px;
+  height: 64px;
+}
+
+.content main .profile-section .container .box3 .main .activities-row .info-img .info h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.content main .profile-section .container .box3 .main .activities-row .info-img .info p {
+  font-size: 15px;
+  color: var(--grey-clr);
+}
+
+.content main .profile-section .container .box3 .main .activities-row .time h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.content main .profile-section .container .box3 .main .activities-row .time p {
+  font-size: 15px;
+  color: var(--grey-clr);
+}
+
+@media (max-width: 991px) {
+  .content main .profile-section .container .box3 {
+    width: 100%;
+    flex: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .content main .profile-section .container .box3 .main .activities-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content main .profile-section .container .box3 .main .activities-row .info-img {
+    flex-direction: column;
+  }
+}
+
+/* end content */

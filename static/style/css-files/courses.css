@@ -1,0 +1,93 @@
+/* ==========================================container */
+.content main .courses-section .container {
+  margin-top: 55px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .content main .courses-section .container {
+    grid-template-columns: minmax(200px, 1fr);
+    gap: 10px;
+  }
+}
+
+/* boxs */
+.content main .courses-section .container .boxs {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.content main .courses-section .container .boxs .icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.content main .courses-section .container .boxs .image {
+  width: 100%;
+}
+
+
+.content main .courses-section .container .boxs .info {
+  padding: 20px;
+}
+
+.content main .courses-section .container .boxs .info h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.content main .courses-section .container .boxs .info p {
+  font-size: 12px;
+  color: var(--grey-clr);
+}
+
+
+.content main .courses-section .container .boxs .foot {
+  position: relative;
+  padding: 20px;
+  margin-top: 20px;
+  border-top: 1px solid var(--boxs-clr);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content main .courses-section .container .boxs .foot .c-info {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -14px;
+  padding: 4px 8px;
+  color: white;
+  font-size: 13px;
+  border-radius: 6px;
+  background-color: var(--blue-clr);
+}
+
+.content main .courses-section .container .boxs .foot span:not(:first-child) {
+  font-size: 12px;
+  color: var(--grey-clr);
+}
+
+@media (max-width: 767px) {
+  .content main .files-section .courses-section .container .boxs .icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+}
+
+/* end content */

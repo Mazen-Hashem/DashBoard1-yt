@@ -1,0 +1,346 @@
+/* link css files */
+@import url(css-files/dashboard.css);
+@import url(css-files/settings.css);
+@import url(css-files/profile.css);
+@import url(css-files/projects.css);
+@import url(css-files/courses.css);
+@import url(css-files/friends.css);
+@import url(css-files/files.css);
+@import url(css-files/plans.css);
+
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* start global rules */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-clr);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-alt-clr);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea,
+select {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+:root {
+  /* color */
+  --blue-clr: #0075ff;
+  --blue-alt-clr: #0d69d5;
+  --orange-clr: #f59e0b;
+  --green-clr: #22c55e;
+  --red-clr: #f44336;
+  --grey-clr: #888;
+  --bg-clr: #f1f5f9;
+  --border-clr: #ccc;
+  --boxs-clr: #eee;
+
+  /* transition */
+  --main-transition: 0.3s;
+}
+
+/* ==========================================.body */
+.body {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* end global rules */
+
+/* start aside */
+aside {
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 0 10px #ddd;
+  padding: 20px;
+}
+
+aside h1 {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  font-family: "Kalnia Glaze", "Open Sans", serif;
+  font-size: 25px;
+}
+
+aside h1::before,
+aside h1::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+aside h1::before {
+  bottom: -10px;
+  width: calc(100% + 30px);
+  height: 2px;
+  background-color: #f936f0;
+}
+
+aside h1::after {
+  bottom: -19px;
+  width: 12px;
+  height: 12px;
+  border: 4px solid white;
+  border-radius: 50%;
+  background-color: #ba97ed;
+}
+
+@media (max-width: 767px) {
+  aside {
+    padding: 10px;
+  }
+
+  aside h1 {
+    font-size: 15px;
+  }
+
+  aside h1::before,
+  aside h1::after {
+    display: none;
+  }
+}
+
+/* ==========================================nav */
+aside nav {
+  margin-top: 50px;
+}
+
+aside nav ul li button {
+  display: block;
+  width: 180px;
+  margin-top: 5px;
+  color: black;
+  font-size: 15px;
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  text-align: start;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+aside nav ul li button:hover {
+  background-color: #f6f6f6;
+}
+
+aside nav ul li button.active {
+  background-color: #f6f6f6;
+}
+
+aside nav ul li button i {
+  margin-right: 5px;
+}
+
+@media (max-width: 767px) {
+  aside nav {
+    margin-top: 20px;
+  }
+
+  aside nav ul li button {
+    width: fit-content;
+    margin: 5px auto 0;
+    padding: 5px 8px;
+  }
+
+  aside nav ul li button i {
+    margin-right: 0;
+  }
+
+  aside nav ul li button span {
+    display: none;
+  }
+}
+
+/* end aside */
+
+/* start content */
+.content {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ==========================================header */
+.content header {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.content header .search {
+  position: relative;
+}
+
+.content header .search::before {
+  position: absolute;
+  font-family: "font awesome 5 free";
+  content: "\f002";
+  font-weight: 900;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: var(--grey-clr);
+}
+
+.content header .search input {
+  width: 150px;
+  padding: 10px 15px 10px 30px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-clr);
+  transition: width var(--main-transition);
+}
+
+.content header .search input:focus {
+  width: 180px;
+}
+
+.content header .search input:focus::placeholder {
+  opacity: 0;
+}
+
+
+.content header .icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.content header .icons span {
+  position: relative;
+}
+
+.content header .icons span::before {
+  position: absolute;
+  content: "";
+  top: -5px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--red-clr);
+}
+
+.content header .icons span i {
+  font-size: 20px;
+}
+
+.content header .icons img {
+  width: 32px;
+  height: 32px;
+}
+
+/* ==========================================main */
+.content main {
+  min-height: calc(100vh - 66px);
+  padding: 20px;
+  background-color: var(--bg-clr);
+}
+
+.content main .section {
+  display: none;
+}
+.content main .section.active {
+  display: block;
+}
+
+.content main .section h2 {
+  position: relative;
+  width: fit-content;
+  font-size: 35px;
+}
+
+.content main .section h2::before,
+.content main .section h2::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -10px;
+  height: 3px;
+}
+
+.content main .section h2::before {
+  width: 70%;
+  background-color: white;
+}
+
+.content main .section h2::after {
+  width: 25%;
+  background-color: black;
+}
+
+@media (max-width: 767px) {
+  .content main {
+    padding: 10px;
+  }
+}
+
+/* ==========================================footer */
+.content footer {
+  padding: 15px;
+  text-align: center;
+}
+
+.content footer .copy-right p {
+  font-size: 16px;
+}
+
+.content footer .copy-right p span {
+  font-family: "Kalnia Glaze", "Open Sans", serif;
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .content footer .copy-right p {
+    font-size: 12px;
+  }
+  
+  .content footer .copy-right p span {
+    font-family: "Kalnia Glaze", "Open Sans", serif;
+    font-size: 16px;
+  }
+}
